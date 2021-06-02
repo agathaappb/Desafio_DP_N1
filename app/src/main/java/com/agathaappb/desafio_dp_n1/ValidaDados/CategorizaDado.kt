@@ -10,6 +10,7 @@ class CategorizaDado {
                 return msg
             }else{
                 val msg = "CPF Inválido"
+                return msg
             }
 
            // return validaCPF.validaDados(dadoUsuario)

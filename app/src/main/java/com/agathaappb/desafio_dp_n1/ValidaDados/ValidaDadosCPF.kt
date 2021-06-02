@@ -14,7 +14,7 @@ class ValidaDadosCPF:ValidaDados {
     override fun validaDados(dadoUsuario: String): String {
          val serviceCPF = RetrofitClient.createService(ValidadorService::class.java)
          val liveData = MutableLiveData<ValidadorModel>()
-         var validacao = serviceCPF.valida(dadoUsuario).enqueue(object : Callback<ValidadorModel>{
+         serviceCPF.valida(dadoUsuario).enqueue(object : Callback<ValidadorModel>{
 
              override fun onResponse(
                  call: Call<ValidadorModel>,
@@ -22,6 +22,7 @@ class ValidaDadosCPF:ValidaDados {
              ) {
                  val resp= response.body()
                  liveData.value = resp
+
 
              }
 
@@ -36,3 +37,6 @@ class ValidaDadosCPF:ValidaDados {
 
     }
 }
+
+//Esse var validacao não está sendo utilizado por isso eu sugiro que essa linha fique assim:
+//serviceCPF.valida(dadoUsuario).enqueue(object : <ValidadorModel>{

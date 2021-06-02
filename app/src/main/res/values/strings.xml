@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Desafio_DP_N1</string>
-
+    <string name="doc_cpf">CPF</string>
+    <string name="doc_cnpj">CNPJ</string>
+    <string name="edit_hint">CPF ou CNPJ</string>
+    <string name="button">Valida</string>
+    <string name="text_central">Informe o dado a ser validado</string>
 </resources>
